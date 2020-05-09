@@ -1,4 +1,4 @@
-//Compra de productos. 
+//Compra de productos con sus cantidades y costo total
 #include <iostream>
 #include <math.h>
 using namespace std;
