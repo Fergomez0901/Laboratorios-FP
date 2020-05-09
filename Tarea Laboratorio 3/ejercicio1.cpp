@@ -1,3 +1,4 @@
+//Programa que calule el promedio de tres numeros ingresados.
 #include <iostream>
 #include <math.h>
 

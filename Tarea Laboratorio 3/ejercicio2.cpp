@@ -7,7 +7,7 @@ using namespace std;
 int main(void)
 {
     int a, b;
-    cout << "Ingrese el primer numero: ";
+    cout << "Ingrese el primer numero: " ;
     cin >> a;
     cout << "Ingrese el segundo numero: ";
     cin >> b;

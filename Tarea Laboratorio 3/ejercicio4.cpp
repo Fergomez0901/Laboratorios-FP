@@ -1,3 +1,4 @@
+//Definir si un numero ingresado es par o impar
 #include <iostream>
 #include <math.h>
 using namespace std;
