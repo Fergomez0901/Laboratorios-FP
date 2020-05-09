@@ -17,5 +17,5 @@ int main(void)
     cout << "El valor de x1 es: " << x1 << endl;
     cout << "El valor de x2 es: " << x2;
 
-
+    return 0;
 }
