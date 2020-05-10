@@ -11,11 +11,12 @@ int main(void)
     
     cin >> a >> b >> c;
 
-    x1 = (-b + sqrt(pow(b,2)-(4*a*c)))/(2*a);
-    x2 = (-b - sqrt(pow(b,2)-(4*a*c)))/(2*a);
+    x1 = (-b + sqrt(pow(b,2)-(4.0*a*c)))/(2.0*a);
+    x2 = (-b - sqrt(pow(b,2)-(4.0*a*c)))/(2.0*a);
 
+    cout << endl;
     cout << "El valor de x1 es: " << x1 << endl;
-    cout << "El valor de x2 es: " << x2;
+    cout << "El valor de x2 es: " << x2 << endl;
 
     return 0;
 
