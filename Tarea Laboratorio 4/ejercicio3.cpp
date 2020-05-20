@@ -4,9 +4,8 @@ using namespace std;
 
 int main(void)
 {
-    cout << endl << "Verificar si un numero es positivo, negativo o 0" << endl;
-
     int numero;
+    cout << endl << "Verificar si un numero es positivo, negativo o 0" << endl;
 
     cout << "Ingrese un numero" << endl;
     cin >> numero;

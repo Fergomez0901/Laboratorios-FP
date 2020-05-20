@@ -11,7 +11,7 @@ int main(void)
     int mod = 0;
     cout << "Ingrese una palabra" <<endl;
     cin >> palabra;
-    char p[palabra.length()-1];   //palabra to char array
+    char p[palabra.length()-1];   //palabra to char arra.... ahora me doy cuenta que no es necesario :/
 
     if(sizeof(p) == 10)
     {
@@ -20,13 +20,14 @@ int main(void)
     else if (sizeof(p) > 10)
     {
         cout << "La palabra tiene mas de 10 caracteres" << endl;
+        cout << "La palabra contiene exactamente " << sizeof(p) << " caracteres" << endl; //solamente para confirmar
     }
     else
     {
         cout << "La palabra tiene menos de 10 caracteres" << endl; 
+        cout << "La palabra contiene exactamente " << sizeof(p) << " caracteres" << endl; //solamente para confirmar
     }
-    cout << "La palabra contiene exactamente " << sizeof(p) << " caracteres" << endl; //solamente para confirmar
-
+    
     mod = sizeof(p) % 2;
     if (mod == 0)
     {

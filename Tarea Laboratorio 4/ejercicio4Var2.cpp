@@ -11,12 +11,13 @@ int main(void)
     int mod = 0;
     cout << "Ingrese una palabra" <<endl;
     cin >> palabra;
+    int size = palabra.length();
 
-    if(palabra.length() == 10)
+    if(size == 10)
     {
         cout << "La palabra contiene 10 caracteres" << endl;
     }
-    else if(palabra.length() > 10)
+    else if(size > 10)
     {
         cout << "La palabra contiene mas de 10 caracteres" << endl;
     }
@@ -24,7 +25,8 @@ int main(void)
     {
         cout << "La palabra contiene menos de 10 caracteres" << endl; 
     }
-    cout << "La palabra contiene exactamente " << palabra.length() << " caracteres" << endl; //solo para confirmar
+    
+    cout << "La palabra contiene exactamente " << size << " caracteres" << endl; //solo para confirmar
 
     mod = palabra.length() % 2;
     if (mod == 0)

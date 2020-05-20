@@ -18,10 +18,10 @@ int main(void)
     {
         p[i] = palabra[i];
     }
-    
+
     f = p[0]; 
     l = p[palabra.length() -1];
-
+    
     if(f == l)
     {
         cout << "La palabra comienza y termina con la misma letra" << endl;
