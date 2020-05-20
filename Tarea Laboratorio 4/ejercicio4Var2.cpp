@@ -11,23 +11,22 @@ int main(void)
     int mod = 0;
     cout << "Ingrese una palabra" <<endl;
     cin >> palabra;
-    char p[palabra.length()];   //palabra to char array
 
-    if(sizeof(p) == 10)
+    if(palabra.length() == 10)
     {
-        cout << "La palabra tiene 10 caracteres" << endl; 
+        cout << "La palabra contiene 10 caracteres" << endl;
     }
-    else if (sizeof(p) > 10)
+    else if(palabra.length() > 10)
     {
-        cout << "La palabra tiene mas de 10 caracteres" << endl;
+        cout << "La palabra contiene mas de 10 caracteres" << endl;
     }
     else
     {
-        cout << "La palabra tiene menos de 10 caracteres" << endl; 
+        cout << "La palabra contiene menos de 10 caracteres" << endl; 
     }
-    cout << "La palabra contiene exactamente " << sizeof(p) << " caracteres" << endl; //solamente para confirmar
+    cout << "La palabra contiene exactamente " << palabra.length() << " caracteres" << endl; //solo para confirmar
 
-    mod = sizeof(p) % 2;
+    mod = palabra.length() % 2;
     if (mod == 0)
     {
         cout << "La cantidad de caracteres es par" << endl; 
@@ -38,3 +37,4 @@ int main(void)
     }
     return 0;
 }
+    
