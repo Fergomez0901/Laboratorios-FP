@@ -12,7 +12,7 @@ int main(void)
     cout << "Ingrese una palabra: " << endl; 
     cin >> palabra;
 
-    char p[palabra.length()];
+    char p[palabra.length()-1];
 
     for(int i = 0; i < palabra.length(); i++)
     {

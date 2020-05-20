@@ -11,7 +11,7 @@ int main(void)
     int mod = 0;
     cout << "Ingrese una palabra" <<endl;
     cin >> palabra;
-    char p[palabra.length()];   //palabra to char array
+    char p[palabra.length()-1];   //palabra to char array
 
     if(sizeof(p) == 10)
     {
