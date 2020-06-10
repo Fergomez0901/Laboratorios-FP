@@ -27,7 +27,9 @@ int main(void)
     }
     cout << endl << "Desea intentarlo de nuevo? (Y/N)" << endl; 
     cin >> retry;
+
     }   // fin del while
+    
 return 0;
 }
 
