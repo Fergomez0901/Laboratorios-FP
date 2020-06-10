@@ -4,18 +4,16 @@ using namespace std;
 
 int main(void)
 {
-    cout << endl << "Cual es la hora:" << endl; 
+    cout << endl << "Cual es la hora?" << endl; 
     int hora, min, seg;
     cout << "Ingrese la hora (hora [en formato 24h], minutos, sigundo) " << endl; 
     cin>>hora>>min>>seg; 
 
     calcHora(hora, min, seg);
     
-    cout << "Luego de 1 segundo: " <<endl; 
-    cout << "La hora es: " << hora << endl;
-    cout << "El minuto es: " << min << endl;
-    cout << "El segundo es: " << seg << endl; 
-
+    cout << "Luego de 1 segundo la hora es: " <<endl; 
+    cout << hora << ":" << min << ":" << seg << endl; 
+    return 0; 
 }
 
 void calcHora(int& hora, int& min, int& seg)
