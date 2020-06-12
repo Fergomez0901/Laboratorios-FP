@@ -8,9 +8,8 @@ int main(void)
     int vidas = 5;
     int numero = rand() % 100 + 1;
     cout << endl << "EL NUMERO MAGICO: INTENTA ADIVINAR EL NUMERO MAGICO (ENTRE 1 Y 100)" << endl; 
-
+    
     numeroMagico(numero, vidas);
-
     return 0; 
 }
 void numeroMagico(int numeroMagico, int vidas)

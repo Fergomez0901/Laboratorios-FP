@@ -25,7 +25,6 @@ int main(void)
     }
     return 0; 
 }
-
 float calcsalarioTot(float horas, float horasExt)
 {
     float valHora = 1.75, valhoraExt = 2.50, salarioTot = 0;
@@ -34,7 +33,6 @@ float calcsalarioTot(float horas, float horasExt)
 
     return salarioTot;
 }
-
 float calcsalarioFin(float salarioTot)
 {
     float seguro = 0.04, afp = 0.0625, tax = 0.10, salarioFin = 0;
