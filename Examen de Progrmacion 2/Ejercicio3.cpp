@@ -20,12 +20,11 @@ int main(void)
     
  return 0;   
 }
-
 bool esBisiesto(int n)
 {
-    int mod = n % 400;
-    int mod2 = n % 4;
-    int mod3 = n % 100;
+    int mod = n % 400; //PRUEBA 1
+    int mod2 = n % 4;  //PRUEBA 2
+    int mod3 = n % 100;//PRUEBA 2
     
     if(mod == 0)
     {
