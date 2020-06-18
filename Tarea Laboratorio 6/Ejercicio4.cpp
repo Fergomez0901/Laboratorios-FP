@@ -1,10 +1,10 @@
 #include <iostream>
-using namespace std;
 void llenarArreglo1(int longitud,int miArreglo1[]);
 void llenarArreglo2(int longitud,int miArreglo2[]);
-void sumArrays(int myArray1[], int myArray2[], int longitud, int arrayRes[]);
+int* sumArrays(int myArray1[], int myArray2[], int longitud, int arrayRes[]);
+void printRes(int arrResultado[], int longitud);
 
-
+using namespace std;
 int main(void)
 {
     int n;
@@ -19,7 +19,7 @@ int main(void)
     llenarArreglo1(n, Array1);
     llenarArreglo2(n, Array2);
     cout << endl; 
-    sumArrays(Array1, Array2, n, suma);
+    printRes(sumArrays(Array1, Array2, n, suma), n);
 
     return 0; 
 }
@@ -32,7 +32,6 @@ void llenarArreglo1(int longitud,int miArreglo1[])
     }
 
     cout << "El arreglo 1 es:" << endl; 
-
     for(int i = 0; i < longitud; i++)
     {
         cout << miArreglo1[i] << " ";
@@ -48,25 +47,28 @@ void llenarArreglo2(int longitud,int miArreglo2[])
     }
 
     cout << "El arreglo 2 es:" << endl; 
-
     for(int i = 0; i < longitud; i++)
     {
         cout << miArreglo2[i] << " ";
     }
     cout << endl; 
 }
-void sumArrays(int myArray1[], int myArray2[], int longitud, int arrayRes[])
+int* sumArrays(int myArray1[], int myArray2[], int longitud, int arrayRes[])
 {
     for(int i = 0; i < longitud; i++)
     {
         arrayRes[i] = myArray1[i] + myArray2[i];
     }
+    return arrayRes;
+}
 
-    cout << "El array resultante es: " << endl; 
+void printRes(int arrResultado[], int longitud)
+{
+    cout << "El resultado de la suma de los arreglos es: " << endl; 
 
-    for(int j = 0; j < longitud; j++)
+    for(int i = 0; i < longitud; i++)
     {
-        cout << arrayRes[j] << " "; 
-    }
+        cout << arrResultado[i] << " ";
+    } 
     cout << endl; 
 }
