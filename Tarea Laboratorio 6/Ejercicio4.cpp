@@ -61,7 +61,6 @@ int* sumArrays(int myArray1[], int myArray2[], int longitud, int arrayRes[])
     }
     return arrayRes;
 }
-
 void printRes(int arrResultado[], int longitud)
 {
     cout << "El resultado de la suma de los arreglos es: " << endl; 
