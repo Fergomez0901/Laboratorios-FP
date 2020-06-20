@@ -4,7 +4,6 @@ using namespace std;
 int main(void)
 {
     int numeros[200], numPares[100], numImpares[100]; 
-
     cout << endl << "Arreglo de numeros impares" << endl; 
 
     int cont1 = 0, cont2 = 0;
