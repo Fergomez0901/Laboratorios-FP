@@ -61,5 +61,4 @@ void repNumero(int arreglo[], int longitud, int count, int numero)
     {
         cout << "El numero " << numero << " se repite " << count << " veces" << endl; 
     }
-    
 }
