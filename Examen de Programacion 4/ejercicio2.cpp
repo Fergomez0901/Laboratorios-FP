@@ -56,7 +56,7 @@ void refMedia(int estaturas[], int promedio)
         {
             abajoMed+=1; 
         }
-        else
+        else        //estaturas[i0] == promedio
         {
             enMed+=1;
         } 

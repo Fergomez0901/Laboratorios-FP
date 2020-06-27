@@ -15,7 +15,7 @@ int main(void)
     cout << "Cuantos estudiantes son?" << endl; 
     cin >> filas ;
 
-    int notas[filas][5];
+    int notas[filas][5]; //Array de notas
 
     llenarArreglo(notas, filas, columnas);
     notaFinal(notas, filas, columnas);
@@ -32,7 +32,7 @@ void llenarArreglo(int notas[][5], int nfilas, int ncolumnas)
         for(int j = 0; j < ncolumnas; j++)
         {
             cout << "Estudiante # " << i+1 << " , Actividad # " << j+1 << " :" << endl;
-            cout << "Digite la calificacion: " << endl;
+            cout << "Digite la nota: " << endl;
             cin >> notas[i][j];
         }
     }
@@ -42,7 +42,7 @@ void llenarArreglo(int notas[][5], int nfilas, int ncolumnas)
 {
     for(int i = 0; i < nfilas; i++)
     {
-        float calificacion = 0;
+        float calificacion = 0;  //Nota final (resultado de la suma de las notas por su valor)
 
         for(int j = 0; j < ncolumnas; j++)
         {
@@ -52,7 +52,7 @@ void llenarArreglo(int notas[][5], int nfilas, int ncolumnas)
         {
             cout << "El estudiante " << i+1 << " Aprobo el curso con una nota de: " << calificacion << endl; 
         }
-        else
+        else        //calificacion < 6.00
         {
             cout << "El estudiante " << i+1 << " Reprobo el curso con una nota de: " << calificacion << endl; 
         }

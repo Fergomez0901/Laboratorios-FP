@@ -29,7 +29,7 @@ int main(void)
 
 void codificarArray(char letras[], int longitud)
 {
-    for(int i = 0; i < longitud; i++)
+    for(int i = 0; i < longitud; i++)       //Verifica letra por letra si coincide con las letras que forman el codigo.
     {
         if(letras[i] == 'm')
         {
@@ -79,7 +79,7 @@ void codificarArray(char letras[], int longitud)
 
     cout << endl << "El mensaje codificado es: " << endl; 
 
-    for(int i = 0; i < longitud; i++)
+    for(int i = 0; i < longitud; i++)       //Desplegar el mensaje
     {
         cout << letras[i] << " ";
     }
