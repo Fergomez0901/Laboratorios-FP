@@ -19,6 +19,8 @@ int main(void)
 {
     costoxArticulo f1;  //f1 variable de struct costoxArticulo
 
+    int cantArticulos;
+
 llenararticulos(f1.nombreArticulo,f1.cantidad, f1.precioTotal, f1.costoPorArticulo);
 
 
