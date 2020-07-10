@@ -1,43 +1,73 @@
 #include <iostream>
-#include <cmath>
 #include <string.h>
-using namespace std;
+using namespace std; 
 
-const int longCad = 20; 
-
-struct costoxArticulo
+struct costoXarticulo;
 {
-    string nombreArticulo;
+    string nombreArticulo[21];
     int cantidad; 
-    float precioTotal;
-    float costoPorArticulo;
+    float precioUni; 
+    float costoporArticulo; 
 };
 
-void llenararticulos(string, int, float, float);
+float costoporArticulo(float, int);
 
 int main(void)
 {
-    costoxArticulo f1;  //f1 variable de struct costoxArticulo
+    costoXarticulo 
+    int cant, opcion;
+    char retry = 'Y';
+    cout << "Cuantos articulos se compraran?" << endl; 
+    cin >> cant; 
 
-    int cantArticulos;
+    int productos[cant];
+    int cantProd;
 
-llenararticulos(f1.nombreArticulo,f1.cantidad, f1.precioTotal, f1.costoPorArticulo);
+    detallesArticulos(); 
+
+    while(retry == 'y' || retry == 'Y')
+    {
+        cout << "Ingrese una opcion" << endl; 
+        cin >> opcion; 
+
+        if(opcion == 1)
+        {
+            float precio1 = 1.50;
+            cout << "Ingrese la cantidad que desea:" << endl; 
+            cin >> cantProd;
+
+           cout << "Costo total por producto: " << costoporArticulo(precio1, cantProd);
+        }
+        else if(opcion == 2)
+        {
+
+        }else if(opcion == 3)
+        {
+
+        }else if(opcion == 4)
+        {
+
+        }else if(opcion == 5)
+        {
+            
+        }
+
+        cout << "Desea agregar otro producto?" << endl; 
+        cin >> retry; 
+    }
 
 
-return 0; 
+    return 0; 
 }
 
-
-void llenararticulos(string nombreArticulo, int cantidad, float precioTotal, float costo)
+void detallesArticulos()
 {
-    cout << endl << "Ingrese el nombre del Articulo: " << endl;
-    cin >> nombreArticulo;
-    cout << endl << "Ingrese la cantidad de productos a comprar:" << endl; 
-    cin >> cantidad;
-    cout << endl << "Ingrese el costo por unidad:" << endl;
-    cin >> costo;
+    cout << "Productos:" << endl; 
+    cout << "1) Chocolate \n2) Gaseosa \n3) Jugo \n4) Leche \n5) Nachos" << endl;
+}
 
-    precioTotal = cantidad*costo;
-    cout << endl << "El precio total es: $" << precioTotal;
-
+float costoporArticulo(float precioProd, int cantidadProd)
+{
+    float resultado = precioProd*cantidadProd; 
+    return resultado; 
 }
