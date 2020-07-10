@@ -84,5 +84,5 @@ void calcCostoTotal(costoXarticulo productos[], int size, float costoTotal)
         costoTotal = costoTotal + productos[i].costoPorArticulo; 
     }
 
-    cout << "El costo total es: $" << costoTotal;
+    cout << endl << "El precio total es: $" << costoTotal;
 }
