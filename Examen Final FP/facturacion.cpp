@@ -2,72 +2,63 @@
 #include <string.h>
 using namespace std; 
 
-struct costoXarticulo;
-{
-    string nombreArticulo[21];
-    int cantidad; 
-    float precioUni; 
-    float costoporArticulo; 
-};
+const int longCad = 20;
 
-float costoporArticulo(float, int);
+struct costoXarticulo
+{
+    char nombreArticulo[longCad + 1];
+    int cantidad;
+    float precioUni;
+    float costoPorArticulo;
+}; 
 
 int main(void)
 {
-    costoXarticulo 
-    int cant, opcion;
-    char retry = 'Y';
-    cout << "Cuantos articulos se compraran?" << endl; 
-    cin >> cant; 
+    string nombre; 
+    int n; // Cantidad de articulos a comprar.
+    float costoTotal = 0.0;
+    cout << endl << "cuantos articulos comprara?" << endl; 
+    cin >> n; 
+    fflush(stdin);
+    
+    costoXarticulo productos[n];
 
-    int productos[cant];
-    int cantProd;
+    cout << "Digite el nombre del producto, cantidad y el precio por unidad." << endl; 
 
-    detallesArticulos(); 
-
-    while(retry == 'y' || retry == 'Y')
+    for(int i = 0; i < n; i++)
     {
-        cout << "Ingrese una opcion" << endl; 
-        cin >> opcion; 
+        cout << "Nombre del articulo: " ; 
+        getline(cin, nombre, '\n');
+        strncpy(productos[i].nombreArticulo, nombre.c_str(), longCad);
+        productos[i].nombreArticulo[longCad] = '\0';
+        cout << "Ingrese la cantidad de producto: ";
+        cin >> productos[i].cantidad;
+        cout << "Ingrese el precio por unidad: ";
+        cin >> productos[i].precioUni; 
 
-        if(opcion == 1)
-        {
-            float precio1 = 1.50;
-            cout << "Ingrese la cantidad que desea:" << endl; 
-            cin >> cantProd;
+        cout << endl; 
 
-           cout << "Costo total por producto: " << costoporArticulo(precio1, cantProd);
-        }
-        else if(opcion == 2)
-        {
-
-        }else if(opcion == 3)
-        {
-
-        }else if(opcion == 4)
-        {
-
-        }else if(opcion == 5)
-        {
-            
-        }
-
-        cout << "Desea agregar otro producto?" << endl; 
-        cin >> retry; 
+        fflush(stdin);
     }
 
+    for(int j = 0; j < n; j++)
+    {
+        productos[j].costoPorArticulo = productos[j].precioUni * productos[j].cantidad;
+    }
 
-    return 0; 
-}
+    for(int i = 0; i < n; i++)
+    {
+        costoTotal = costoTotal + productos[i].costoPorArticulo; 
+    }
 
-void detallesArticulos()
-{
-    cout << "Productos:" << endl; 
-    cout << "1) Chocolate \n2) Gaseosa \n3) Jugo \n4) Leche \n5) Nachos" << endl;
-}
+    cout << "Los datos del arreglo son: " << endl; 
+    for(int i = 0; i <n; i++)
+    {
+        cout << "Nombre del producto: "<<productos[i].nombreArticulo << endl;
+        cout << "Cantidad: " << productos[i].cantidad << endl; 
+        cout << "Costo por unidad: " << productos[i].precioUni << endl; 
+        cout << "Costo por articulo: " << productos[i].costoPorArticulo << endl; 
+    }
 
-float costoporArticulo(float precioProd, int cantidadProd)
-{
-    float resultado = precioProd*cantidadProd; 
-    return resultado; 
-}
+    cout << "Total a cancelar: " << costoTotal << endl; 
+}   
