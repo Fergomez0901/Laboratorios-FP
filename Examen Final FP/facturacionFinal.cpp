@@ -23,6 +23,7 @@ int main (void)
     int n; //cantidad de articulos a comprar / en el arreglo.
     float costoTotal = 0.0; //acumulador del costo total
 
+    cout << "------------Sistema de Facturacion------------" << endl; 
     cout << endl << "Ingrese la cantidad de articulos a comprar: " << endl; 
     cin >> n; 
     fflush(stdin);
@@ -66,7 +67,9 @@ void calcCostoArticulo(costoXarticulo productos[], int size)
 
 void displayProductos(costoXarticulo productos[], int size)
 {
-    cout << "Detalles de los articulos" << endl; 
+    cout << "********************************************" << endl;
+    cout << "----------------- Factura ------------------" << endl; 
+    
     for(int i = 0; i < size; i++)
     {
         cout << "Nombre del producto: "<<productos[i].nombreArticulo << endl;
@@ -81,8 +84,9 @@ void calcCostoTotal(costoXarticulo productos[], int size, float costoTotal)
  
     for(int i = 0; i < size; i++)
     {
-        costoTotal = costoTotal + productos[i].costoPorArticulo; 
+        costoTotal = costoTotal + productos[i].costoPorArticulo; //Precio Total
     }
 
-    cout << endl << "El precio total es: $" << costoTotal;
+    cout << endl << "El precio total es: $" << costoTotal << endl; 
+    cout << "********************************************" << endl;
 }
